@@ -205,7 +205,7 @@ def Main():
                         help="Specify TARGET FACEBOOK PROFILE URL to Get ID")
    parse.add_option("-u","-U","--update","--UPDATE", dest="update", action="store_true", default=False)
    (options,args) = parse.parse_args()
-   FaceBoom = faceboom()
+   faceboom = FaceBoom()
    target = options.target
    wordlist = options.wordlist
    single_passwd = options.single

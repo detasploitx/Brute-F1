@@ -123,13 +123,13 @@ class FaceBoom(object):
 
 
     @staticmethod
-    def updateFacebook_hack():
+    def updateBrute-F1():
         if not os.path.isfile(versionPath):
              errMsg("Check for Update : Please re-clone the Script to Fix this Problem")
              sys.exit(1)
         write("[•] Checking for Update...\n")
         conn = httplib.HTTPSConnection("raw.githubusercontent.com")
-        conn.request("GET", "/Oseid/Facebook_hack/master/core/version.txt")
+        conn.request("GET", "/DetaSploit/Brute-F1/main/core/version.txt")
         repoVersion = conn.getresponse().read().strip().decode()
         with open(versionPath) as vf:
             currentVersion = vf.read().strip()
@@ -138,8 +138,8 @@ class FaceBoom(object):
                 print("  [•] An Update has Been Found : Updating... ")
                 conn.request("GET", "/DetaSploi/Brute-F1/master/brute-f1.py")
                 newCode = conn.getresponse().read().strip().decode()
-                with open("brute-f1.py", "w") as  facebook_hackScript:
-                   faceBook_hackScript.write(newCode)
+                with open("brute-f1.py", "w") as  brute-f1Script:
+                   brute-f1Script.write(newCode)
                 with open(versionPath, "w") as ver:
                      ver.write(repoVersion)
                 write("  [•] Successfully Updated :)\n")
@@ -212,7 +212,7 @@ def Main():
        errMsg("Please Check Your Internet Connection")
        sys.exit(1)
    if update:
-    facebook_hack.updateFaceBook_hack()
+    brute-f1.updateBrute-F1()
     sys.exit(1)
    elif target_profile:
         faceboom.get_profile_id(target_profile)

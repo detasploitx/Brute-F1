@@ -123,7 +123,7 @@ class FaceBoom(object):
 
 
     @staticmethod
-    def updateBrute-F1():
+    def updateBruteF():
         if not os.path.isfile(versionPath):
              errMsg("Check for Update : Please re-clone the Script to Fix this Problem")
              sys.exit(1)
@@ -136,10 +136,10 @@ class FaceBoom(object):
         if repoVersion == currentVersion:write("  [•] The Script is Up to Date!\n")
         else:
                 print("  [•] An Update has Been Found : Updating... ")
-                conn.request("GET", "/DetaSploi/Brute-F1/master/brute-f1.py")
+                conn.request("GET", "/DetaSploi/Brute-F1/main/brute-f1.py")
                 newCode = conn.getresponse().read().strip().decode()
-                with open("brute-f1.py", "w") as  brute-f1Script:
-                   brute-f1Script.write(newCode)
+                with open("brute-f1.py", "w") as  brutefScript:
+                   brutefScript.write(newCode)
                 with open(versionPath, "w") as ver:
                      ver.write(repoVersion)
                 write("  [•] Successfully Updated :)\n")
@@ -212,7 +212,7 @@ def Main():
        errMsg("Please Check Your Internet Connection")
        sys.exit(1)
    if update:
-    brute-f1.updateBrute-F1()
+    brutef.updateBruteF()
     sys.exit(1)
    elif target_profile:
         faceboom.get_profile_id(target_profile)

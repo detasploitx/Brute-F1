@@ -179,13 +179,13 @@ parse = optparse.OptionParser(yl+"""
 ―――[ Examples ]―――"""+yl+"""
         
      
-  [•]"""+wi+""" python brute-f1.py -t Asif@gmail.com -w /usr/share/wordlists/wordlist.txt"""+yl+"""
+  [•]"""+wi+""" python brute-f1.py -t Asif1@gmail.com -w /usr/share/wordlists/wordlist.txt"""+yl+"""
      
   [•]"""+wi+""" python brute-f1.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt"""+yl+"""
      
-  [•]"""+wi+""" python brute-f1.py -t Asif@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129"""+yl+"""
+  [•]"""+wi+""" python brute-f1.py -t Asif1@hotmail.com  -w D:\\wordlist.txt -p 144.217.101.21:3129"""+yl+"""
      
-  [•]"""+wi+""" python brute-f1.py -t Asif@gmail.com -s 1234567"""+yl+"""
+  [•]"""+wi+""" python brute-f1.py -t Asif1@gmail.com -s 1234567"""+yl+"""
      
   [•]+wi+ python brute-f1.py -g https://www.facebook.com/username"""+wi
      

@@ -187,7 +187,7 @@ parse = optparse.OptionParser(yl+"""
      
   [•]"""+wi+""" python brute-f1.py -t Asif1@gmail.com -s 1234567"""+yl+"""
      
-  [•]+wi+ python brute-f1.py -g https://www.facebook.com/username
+  [•]"""+wi+""" python brute-f1.py -g https://www.facebook.com/username
      
 """+wi)
 

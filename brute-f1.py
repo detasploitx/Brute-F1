@@ -85,7 +85,7 @@ class FaceBoom(object):
         try:
             self.br.open("http://masterdir.wapkiz.com/site_login.html")
             self.br.select_form(nr=0)
-            self.br.form['email']=target
+            self.br.form['username']=target
             self.br.form['pass']= password
             self.br.method ="POST"
             if self.br.submit().get_data().__contains__(b'home_icon'):return  1

